@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[分类1]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%88%86%E7%B1%BB1%2F</url>
+    <content type="text"><![CDATA[niddssS dde]]></content>
+      <categories>
+        <category>Testing -gh</category>
+      </categories>
+      <tags>
+        <tag>Ted</tag>
+        <tag>another tag</tag>
+        <tag>toeach</tag>
+        <tag>that</tag>
+        <tag>tis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[标签分类]]></title>
+    <url>%2F2019%2F07%2F29%2F%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[测试文章 分类]]></content>
+      <categories>
+        <category>Testing</category>
+      </categories>
+      <tags>
+        <tag>Test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇博客文章]]></title>
+    <url>%2F2019%2F07%2F26%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[第一章将hexo 用 github+netlify部署 1234public void falDde()&#123; int i=9; i++;&#125; 第二章 参考文献]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F07%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
