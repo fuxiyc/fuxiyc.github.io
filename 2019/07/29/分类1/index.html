@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="niddssS dde">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-29T14:28:30.181Z">
+<meta property="og:updated_time" content="2019-07-30T07:25:28.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分类1">
 <meta name="twitter:description" content="niddssS dde">
@@ -414,44 +414,64 @@
     
     
     
+	
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
+  <p><span>本文标题:</span>分类1</p>
+  <p><span>文章作者:</span>Arthur</p>
+  <p><span>发布时间:</span>2019年07月29日 - 21:51:01</p>
+  <p><span>最后更新:</span>2019年07月30日 - 15:25:28</p>
+  <p><span>原始链接:</span><a href="/2019/07/29/分类1/" title="分类1">http://yoursite.com/2019/07/29/分类1/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/29/分类1/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+	</div>	
+	
     
 
     
 
-    
-      <div>
-        <ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Arthur
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/07/29/分类1/" title="分类1">http://yoursite.com/2019/07/29/分类1/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-
-      </div>
     
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Ted/" rel="tag"># Ted</a>
+            <a href="/tags/Ted/" rel="tag"><i class="fa fa-tag"></i> Ted</a>
           
-            <a href="/tags/another-tag/" rel="tag"># another tag</a>
+            <a href="/tags/another-tag/" rel="tag"><i class="fa fa-tag"></i> another tag</a>
           
-            <a href="/tags/toeach/" rel="tag"># toeach</a>
+            <a href="/tags/toeach/" rel="tag"><i class="fa fa-tag"></i> toeach</a>
           
-            <a href="/tags/that/" rel="tag"># that</a>
+            <a href="/tags/that/" rel="tag"><i class="fa fa-tag"></i> that</a>
           
-            <a href="/tags/tis/" rel="tag"># tis</a>
+            <a href="/tags/tis/" rel="tag"><i class="fa fa-tag"></i> tis</a>
           
         </div>
       
@@ -653,6 +673,45 @@
 
 
 
+
+
+
+<span id="sitetime"></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2019,07,21,00,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" Run for "+/*diffYears+" Year "+*/diffDays+" Days "+diffHours+" Hours "+diffMinutes+" m "+diffSeconds+" s";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
 
 
 
@@ -1273,6 +1332,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
