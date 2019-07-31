@@ -403,16 +403,14 @@
         
 <div class="my_post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <!-- 自创的版权信息 -->
+  <!--  创建自定义版权信息  参考https://www.jianshu.com/p/f054333ac9e6?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation -->
   <!-- JS库 sweetalert 可修改路径 -->
-  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-
-  <p><span>本文标题:</span>ches2</p>
-  <p><span>文章作者:</span>Arthur</p>
-  <p><span>发布时间:</span>2019年07月30日 - 16:54:48</p>
-  <p><span>最后更新:</span>2019年07月30日 - 16:54:48</p>
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/07/30/ches2/">ches2</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Arthur 的个人博客">Arthur</a></p>
+  <p><span>发布时间:</span>2019年07月30日 - 16:54</p>
+  <p><span>最后更新:</span>2019年07月30日 - 16:54</p>
   <p><span>原始链接:</span><a href="/2019/07/30/ches2/" title="ches2">http://yoursite.com/2019/07/30/ches2/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/30/ches2/" aria-label="复制成功！"></i></span>
   </p>
@@ -420,18 +418,18 @@
 </div>
 <script> 
     var clipboard = new Clipboard('.fa-clipboard');
-    clipboard.on('success', $(function(){
       $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
         swal({   
           title: "",   
-          text: '复制成功',   
-          html: false,
-          timer: 500,   
-          showConfirmButton: false
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
         });
-      });
-    }));  
+    });  
 </script>
+
 
       
 	</div>	
