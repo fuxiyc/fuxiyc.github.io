@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="StringUtils的常用方法    dfdggd">
+<meta name="description" content="StringUtils的常用方法    StringUtils 方法的操作对象是 Java.lang.String 类型的对象，是 JDK 提供的 String 类型操作方法的补充，并且是 null 安全的(即如果输入参数 String 为 null 则不会抛出 NullPointerException ，而是做了相应处理，例如，如果输入为 null 则返回也是 null 等，具体可以查看源代码)">
 <meta name="keywords" content="java,StringUtils">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中StringUtils的常用方法">
 <meta property="og:url" content="https://www.fuxiyuchen.xyz/2019/08/01/Java中StringUtils的常用方法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="StringUtils的常用方法    dfdggd">
+<meta property="og:description" content="StringUtils的常用方法    StringUtils 方法的操作对象是 Java.lang.String 类型的对象，是 JDK 提供的 String 类型操作方法的补充，并且是 null 安全的(即如果输入参数 String 为 null 则不会抛出 NullPointerException ，而是做了相应处理，例如，如果输入为 null 则返回也是 null 等，具体可以查看源代码)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-01T15:26:56.783Z">
+<meta property="og:updated_time" content="2019-08-01T15:56:19.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中StringUtils的常用方法">
-<meta name="twitter:description" content="StringUtils的常用方法    dfdggd">
+<meta name="twitter:description" content="StringUtils的常用方法    StringUtils 方法的操作对象是 Java.lang.String 类型的对象，是 JDK 提供的 String 类型操作方法的补充，并且是 null 安全的(即如果输入参数 String 为 null 则不会抛出 NullPointerException ，而是做了相应处理，例如，如果输入为 null 则返回也是 null 等，具体可以查看源代码)">
 
 
 
@@ -417,11 +417,18 @@
 
       
         <h1 id><a href="#" class="headerlink" title></a><blockquote class="blockquote-center"><p>StringUtils的常用方法</p>
-</blockquote></h1><p>   dfdggd</p>
+</blockquote></h1><p>   StringUtils 方法的操作对象是 Java.lang.String 类型的对象，是 JDK 提供的 String 类型操作方法的补充，并且是 null 安全的(即如果输入参数 String 为 null 则不会抛出 NullPointerException ，而是做了相应处理，例如，如果输入为 null 则返回也是 null 等，具体可以查看源代码)。</p>
+<p>除了构造器，StringUtils 中一共有130多个方法，并且都是 static 的，所以我们可以这样调用 StringUtils.xxx()</p>
+<p>下面分别对一些常用方法做简要介绍：</p>
 <a id="more"></a>
 
-<p>dfdssads</p>
-<p>edf</p>
+<ol>
+<li><p>public static boolean isEmpty(String str) </p>
+<p><strong>判断某字符串是否为空，为空的标准是 str == null 或 str.length() == 0</strong><br>下面是示例：</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">StringUtils.isEmpty(<span class="keyword">null</span>) = <span class="keyword">true</span></span><br><span class="line">StringUtils.isEmpty(<span class="string">""</span>) = <span class="keyword">true</span> </span><br><span class="line">StringUtils.isEmpty(<span class="string">" "</span>) = <span class="keyword">false</span> <span class="comment">//注意在 StringUtils 中空格作非空处理</span></span><br><span class="line">StringUtils.isEmpty(<span class="string">"   "</span>) = <span class="keyword">false</span></span><br><span class="line">StringUtils.isEmpty(<span class="string">"bob"</span>) = <span class="keyword">false</span></span><br><span class="line">StringUtils.isEmpty(<span class="string">" bob "</span>) = <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -451,7 +458,7 @@
   <p><span>本文标题:</span><a href="/2019/08/01/Java中StringUtils的常用方法/">Java中StringUtils的常用方法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Arthur 的个人博客">Arthur</a></p>
   <p><span>发布时间:</span>2019年08月01日 - 18:30</p>
-  <p><span>最后更新:</span>2019年08月01日 - 23:26</p>
+  <p><span>最后更新:</span>2019年08月01日 - 23:56</p>
   <p><span>原始链接:</span><a href="/2019/08/01/Java中StringUtils的常用方法/" title="Java中StringUtils的常用方法">https://www.fuxiyuchen.xyz/2019/08/01/Java中StringUtils的常用方法/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.fuxiyuchen.xyz/2019/08/01/Java中StringUtils的常用方法/" aria-label="复制成功！"></i></span>
   </p>
@@ -477,6 +484,30 @@
 	
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！！！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Arthur 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
