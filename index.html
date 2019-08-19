@@ -86,7 +86,7 @@
     back2top_sidebar: false,
     fancybox: true,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -419,11 +419,26 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-15 16:45:59" itemprop="dateModified" datetime="2019-08-15T16:45:59+08:00">2019-08-15</time>
+                <time title="修改时间：2019-08-19 17:22:20" itemprop="dateModified" datetime="2019-08-19T17:22:20+08:00">2019-08-19</time>
               </span>
             
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/NexT-v7-2-0/" itemprop="url" rel="index"><span itemprop="name">NexT v7.2.0</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -479,7 +494,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">12 分钟</span>
+              <span title="阅读时长">13 分钟</span>
             </span>
           
 
@@ -858,7 +873,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-15 15:55:26" itemprop="dateModified" datetime="2019-08-15T15:55:26+08:00">2019-08-15</time>
+                <time title="修改时间：2019-08-16 17:27:23" itemprop="dateModified" datetime="2019-08-16T17:27:23+08:00">2019-08-16</time>
               </span>
             
           
@@ -918,7 +933,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">28 分钟</span>
+              <span title="阅读时长">29 分钟</span>
             </span>
           
 
@@ -1263,7 +1278,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1288,7 +1305,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1326,7 +1345,7 @@
 			
 			<div id="myCanvasContainer" class="widget tagcloud">
 				<canvas width="240" height="240" id="resCanvas" style="width=100%">
-					<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/">Next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StringUtils/">StringUtils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li></ul>
+					<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NexT/">NexT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/">Next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StringUtils/">StringUtils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li></ul>
 				</canvas>
 			</div>
 		</div>
@@ -1355,7 +1374,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">46k</span>
   
 
   
@@ -1364,7 +1383,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">42 分钟</span>
   
 </div>
 
@@ -1456,6 +1475,8 @@
 
 
 
+  
+
 
 
 
@@ -1483,6 +1504,9 @@
 
   
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1542,8 +1566,8 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: '2iaj1iPxUDau0PnYoBCUQ3kJ-gzGzoHsz',
-    appKey: 'Ajqj0Yo31VU8CSHGM2co6war',
+    appId: 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI',
+    appKey: '8GzUldR2FT6notgAH7yF83Gt',
     placeholder: '说点什么吧！',
     avatar: 'mm',
     meta: guest,
@@ -1927,15 +1951,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + '2iaj1iPxUDau0PnYoBCUQ3kJ-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': '2iaj1iPxUDau0PnYoBCUQ3kJ-gzGzoHsz',
-                'X-LC-Key': 'Ajqj0Yo31VU8CSHGM2co6war',
+                'X-LC-Id': 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI',
+                'X-LC-Key': '8GzUldR2FT6notgAH7yF83Gt',
                 'Content-Type': 'application/json',
               },
               data: data

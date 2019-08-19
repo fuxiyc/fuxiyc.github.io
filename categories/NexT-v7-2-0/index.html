@@ -86,7 +86,7 @@
     back2top_sidebar: false,
     fancybox: true,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -662,6 +662,8 @@
 
 
 
+  
+
 
 
 
@@ -689,6 +691,9 @@
 
   
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -748,8 +753,8 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: '2iaj1iPxUDau0PnYoBCUQ3kJ-gzGzoHsz',
-    appKey: 'Ajqj0Yo31VU8CSHGM2co6war',
+    appId: 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI',
+    appKey: '8GzUldR2FT6notgAH7yF83Gt',
     placeholder: '说点什么吧！',
     avatar: 'mm',
     meta: guest,
@@ -1133,15 +1138,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + '2iaj1iPxUDau0PnYoBCUQ3kJ-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': '2iaj1iPxUDau0PnYoBCUQ3kJ-gzGzoHsz',
-                'X-LC-Key': 'Ajqj0Yo31VU8CSHGM2co6war',
+                'X-LC-Id': 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI',
+                'X-LC-Key': '8GzUldR2FT6notgAH7yF83Gt',
                 'Content-Type': 'application/json',
               },
               data: data
