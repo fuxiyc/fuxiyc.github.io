@@ -1804,7 +1804,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #22abaa;
+  background: #ff53a3;
 }
 .feed-link,
 .chat {
@@ -2880,4 +2880,10 @@ ul.breadcrumb li+li:last-child {
 }
 .post-gallery .post-gallery-img img {
   padding: 3px;
+}
+code {
+  color: #ff2c1c;
+  background: rgba(28,239,255,0.42);
+  margin: 2px;
+  border: 1px solid #d6d6d6;
 }
