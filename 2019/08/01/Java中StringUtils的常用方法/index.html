@@ -61,10 +61,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=7.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=7.2.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
@@ -384,7 +384,9 @@
 
         <div class="post-meta">
           
-            <i class="fa fa-thumb-tack"></i>
+            <span class="post-meta-item-icon">
+				<i class="fa fa-thumb-tack"></i>
+			</span>
             <font color="F45A8D">置顶</font>
             <span class="post-meta-divider">|</span>
           
@@ -807,7 +809,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">45 分钟</span>
+    <span title="站点阅读时长">46 分钟</span>
   
 </div>
 
@@ -1362,9 +1364,14 @@
               })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
             
           }
         })
@@ -1467,5 +1474,9 @@
 
   
 
+  
+  
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/custom.js"></script>
 </body>
 </html>
