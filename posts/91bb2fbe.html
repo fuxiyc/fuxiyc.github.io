@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-fill-left.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: true,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="​                如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。">
+<meta name="keywords" content="Hexo,Next">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在搭建途中遇到的坑">
+<meta property="og:url" content="https://www.fuxiyuchen.xyz/posts/91bb2fbe.html">
+<meta property="og:site_name" content="晨风细雨的个人博客">
+<meta property="og:description" content="​                如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-21T09:08:51.877Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在搭建途中遇到的坑">
+<meta name="twitter:description" content="​                如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://www.fuxiyuchen.xyz/posts/91bb2fbe">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>在搭建途中遇到的坑 | 晨风细雨的个人博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">晨风细雨的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.fuxiyuchen.xyz/posts/91bb2fbe.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="晨风细雨">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/photo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晨风细雨的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">在搭建途中遇到的坑
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-05 09:42:46" itemprop="dateCreated datePublished" datetime="2019-08-05T09:42:46+08:00">2019-08-05</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-21 17:08:51" itemprop="dateModified" datetime="2019-08-21T17:08:51+08:00">2019-08-21</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/91bb2fbe.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/91bb2fbe.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/91bb2fbe.html" class="post-meta-item leancloud_visitors" data-flag-title="在搭建途中遇到的坑">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">31k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">29 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>​                如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。</p>
+<a id="more"></a>
+
+<h2 id="1-Theme-config-load-failed"><a href="#1-Theme-config-load-failed" class="headerlink" title="1 Theme config load failed"></a>1 Theme config load failed</h2><p>​    在配置自己的 侧边栏社交小图标(Social Links)时出错</p>
+<h3 id="我的配置如下"><a href="#我的配置如下" class="headerlink" title="我的配置如下"></a>我的配置如下</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line"><span class="comment">#social:</span></span><br><span class="line"><span class="attr">  GitHub:</span> <span class="attr">https://github.com/yourname</span> <span class="string">||</span> <span class="string">github</span></span><br><span class="line">  <span class="comment">#E-Mail: mailto:yourname@gmail.com || envelope</span></span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"><span class="attr">  BiliBili:</span> <span class="attr">https://space.bilibili.com/yourid</span> <span class="string">||</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="报错如下"><a href="#报错如下" class="headerlink" title="报错如下"></a>报错如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br></pre></td><td class="code"><pre><span class="line">ERROR Theme config load failed.</span><br><span class="line">ERROR Process failed: _config.yml</span><br><span class="line">YAMLException: bad indentation of a mapping entry at line 130, column 3:</span><br><span class="line">      GitHub: https://github.com/fuxiy ...</span><br><span class="line">      ^</span><br><span class="line">    at generateError (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:167:10)</span><br><span class="line">    at throwError (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:173:9)</span><br><span class="line">    at readBlockMapping (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1107:7)</span><br><span class="line">    at composeNode (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1359:12)</span><br><span class="line">    at readDocument (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1519:3)</span><br><span class="line">    at loadDocuments (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1575:5)</span><br><span class="line">    at Object.load (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1596:19)</span><br><span class="line">    at Hexo.yamlHelper (D:\Users\fuxiy\blog\node_modules\hexo\lib\plugins\renderer\yaml.js:7:15)</span><br><span class="line">    at Hexo.tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34)</span><br><span class="line">    at Promise.then.text (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\render.js:60:20)</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Promise._settlePromiseFromHandler (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:517:31)</span><br><span class="line">    at Promise._settlePromise (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:574:18)</span><br><span class="line">    at Promise._settlePromise0 (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:619:10)</span><br><span class="line">    at Promise._settlePromises (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:699:18)</span><br><span class="line">    at _drainQueueStep (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:138:12)</span><br><span class="line">    at _drainQueue (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:131:9)</span><br><span class="line">    at Async._drainQueues (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:147:5)</span><br><span class="line">    at Immediate.Async.drainQueues [as _onImmediate] (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:17:14)</span><br><span class="line">    at runCallback (timers.js:705:18)</span><br><span class="line">    at tryOnImmediate (timers.js:676:5)</span><br><span class="line">    at processImmediate (timers.js:658:5)</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   NexT repository is moving here: https://github.com/theme-next</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   It&apos;s rebase to v6.0.0 and future maintenance will resume there</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">INFO  Files loaded in 863 ms</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:375:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:375:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:375:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:916:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:482:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:916:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:482:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:482:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:435:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:926:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:482:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:435:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:435:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br><span class="line">ERROR Asset render failed: css/main.css</span><br><span class="line">Error: D:/Users/fuxiy/blog/themes/next/source/css/_common/components/highlight/highlight.styl:79:30</span><br><span class="line">   75|</span><br><span class="line">   76|   .gutter pre &#123;</span><br><span class="line">   77|     padding-left: 10px</span><br><span class="line">   78|     padding-right: 10px</span><br><span class="line">   79|     color: $highlight-gutter.color</span><br><span class="line">------------------------------------^</span><br><span class="line">   80|     text-align: right</span><br><span class="line">   81|     background-color: $highlight-gutter.bg-color</span><br><span class="line">   82|   &#125;</span><br><span class="line"></span><br><span class="line">$highlight-gutter has no property .color</span><br><span class="line">    at &quot;.gutter pre &quot; (D:/Users/fuxiy/blog/themes/next/source/css/_common/components/highlight/highlight.styl:75:4)</span><br><span class="line">    at &quot;.highlight &quot; (D:/Users/fuxiy/blog/themes/next/source/css/_common/components/highlight/highlight.styl:39:2)</span><br><span class="line"></span><br><span class="line">    at Evaluator.visitMember (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:351:11)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitExpression (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:644:26)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitExpression (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:644:26)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitProperty (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:687:22)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitBlock (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:720:39)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitGroup (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:261:22)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitBlock (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:720:39)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitGroup (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:261:22)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.visitBlock (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:720:39)</span><br><span class="line">    at Evaluator.Visitor.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\index.js:28:40)</span><br><span class="line">    at Evaluator.visit (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:160:18)</span><br><span class="line">    at Evaluator.importFile (D:\Users\fuxiy\blog\node_modules\stylus\lib\visitor\evaluator.js:99:18)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">ERROR Theme config load failed.</span><br><span class="line">ERROR Process failed: _config.yml</span><br><span class="line">YAMLException: bad indentation of a mapping entry at line 130, column 3:</span><br><span class="line">      GitHub: https://github.com/fuxiy ...</span><br><span class="line">      ^</span><br><span class="line">    at generateError (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:167:10)</span><br><span class="line">    at throwError (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:173:9)</span><br><span class="line">    at readBlockMapping (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1107:7)</span><br><span class="line">    at composeNode (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1359:12)</span><br><span class="line">    at readDocument (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1519:3)</span><br><span class="line">    at loadDocuments (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1575:5)</span><br><span class="line">    at Object.load (D:\Users\fuxiy\blog\node_modules\js-yaml\lib\js-yaml\loader.js:1596:19)</span><br><span class="line">    at Hexo.yamlHelper (D:\Users\fuxiy\blog\node_modules\hexo\lib\plugins\renderer\yaml.js:7:15)</span><br><span class="line">    at Hexo.tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34)</span><br><span class="line">    at Promise.then.text (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\render.js:60:20)</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Promise._settlePromiseFromHandler (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:517:31)</span><br><span class="line">    at Promise._settlePromise (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:574:18)</span><br><span class="line">    at Promise._settlePromise0 (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:619:10)</span><br><span class="line">    at Promise._settlePromises (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\promise.js:699:18)</span><br><span class="line">    at _drainQueueStep (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:138:12)</span><br><span class="line">    at _drainQueue (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:131:9)</span><br><span class="line">    at Async._drainQueues (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:147:5)</span><br><span class="line">    at Immediate.Async.drainQueues [as _onImmediate] (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\async.js:17:14)</span><br><span class="line">    at runCallback (timers.js:705:18)</span><br><span class="line">    at tryOnImmediate (timers.js:676:5)</span><br><span class="line">    at processImmediate (timers.js:658:5)</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   NexT repository is moving here: https://github.com/theme-next</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   It&apos;s rebase to v6.0.0 and future maintenance will resume there</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br><span class="line">Unhandled rejection Error: ENOENT: no such file or directory, open &apos;D:\Users\fuxiy\blog\themes\next\layout\_scripts\schemes\.swig&apos;</span><br><span class="line">    at Object.openSync (fs.js:443:3)</span><br><span class="line">    at Object.readFileSync (fs.js:343:35)</span><br><span class="line">    at Object.ret.load (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:916:18)</span><br><span class="line">    at compiled (D:\Users\fuxiy\blog\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:123:48)    at Theme._View.View.View.render (D:\Users\fuxiy\blog\node_modules\hexo\lib\theme\view.js:29:15)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\index.js:349:21</span><br><span class="line">    at tryCatcher (D:\Users\fuxiy\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at D:\Users\fuxiy\blog\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (D:\Users\fuxiy\blog\node_modules\hexo\lib\hexo\router.js:123:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:457:10)</span><br><span class="line">    at resume_ (_stream_readable.js:933:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>​    报告中说Theme config load failed 后来仔细观察了我写的配置后发现<strong>#social</strong>的注释忘记去掉了</p>
+<h2 id="2-hexo-d命令报错-ERROR-Deployer-not-found-git"><a href="#2-hexo-d命令报错-ERROR-Deployer-not-found-git" class="headerlink" title="2.hexo d命令报错 ERROR Deployer not found: git"></a>2.hexo d命令报错 ERROR Deployer not found: git</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>我已经在站点配置文件中写入了：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span>  <span class="comment">#github地址</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">run-page</span></span><br></pre></td></tr></table></figure>
+
+<p>但是<code>hexo d</code>报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>这是因为没安装<code>hexo-deployer-git</code>插件，在<strong>站点目录</strong>下输入下面的插件安装就好了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在使用<code>Hexo -d</code>命令就可以推送了。</p>
+<h2 id="3-博客文章阅读次数统计报错"><a href="#3-博客文章阅读次数统计报错" class="headerlink" title="3.博客文章阅读次数统计报错"></a>3.博客文章阅读次数统计报错</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>Error: <code>阅读次数： Counter not initialized! More info at console err msg.</code></p>
+<h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><p>出现上述之错误，遂查看配置文件之说明</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show number of visitors to each article.</span></span><br><span class="line"><span class="comment"># You can visit https://leancloud.cn get AppID and AppKey.</span></span><br><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  app_id:</span> <span class="string">&lt;&lt;your</span> <span class="string">app</span> <span class="string">id&gt;&gt;</span></span><br><span class="line"><span class="attr">  app_key:</span> <span class="string">&lt;&lt;your</span> <span class="string">app</span> <span class="string">key&gt;&gt;</span></span><br><span class="line">  <span class="comment"># Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security</span></span><br><span class="line">  <span class="comment"># If you don't care about security in lc counter and just want to use it directly</span></span><br><span class="line">  <span class="comment"># (without hexo-leancloud-counter-security plugin), set the `security` to `false`.</span></span><br><span class="line"><span class="attr">  security:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  betterPerformance:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>如上述有两种解决方案：</p>
+<ol>
+<li>安装<code>hexo-leancloud-counter-security</code>并设置<code>leancloud</code>的<code>app_id</code>和<code>app_key</code></li>
+<li>将<code>security</code>设置为<code>security: false</code></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+	<!--  本文结束 标签 -->
+	<div>
+    
+    <div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+
+</div>
+
+    
+	</div>
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>晨风细雨</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://www.fuxiyuchen.xyz/posts/91bb2fbe.html" title="在搭建途中遇到的坑">https://www.fuxiyuchen.xyz/posts/91bb2fbe.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+            <a href="/tags/Next/" rel="tag"><i class="fa fa-tag"></i> Next</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/de3510a8.html" rel="next" title="Java中StringUtils的常用方法">
+                <i class="fa fa-chevron-left"></i> Java中StringUtils的常用方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/7830c79a.html" rel="prev" title="Next 新版主题配置">
+                Next 新版主题配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+			<a href="/">
+              <img class="site-author-image" itemprop="image" src="/uploads/photo.png" alt="晨风细雨">
+			</a>
+            
+              <p class="site-author-name" itemprop="name">晨风细雨</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Theme-config-load-failed"><span class="nav-number">1.</span> <span class="nav-text">1 Theme config load failed</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#我的配置如下"><span class="nav-number">1.1.</span> <span class="nav-text">我的配置如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报错如下"><span class="nav-number">1.2.</span> <span class="nav-text">报错如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决："><span class="nav-number">1.3.</span> <span class="nav-text">解决：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-hexo-d命令报错-ERROR-Deployer-not-found-git"><span class="nav-number">2.</span> <span class="nav-text">2.hexo d命令报错 ERROR Deployer not found: git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">2.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">2.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-博客文章阅读次数统计报错"><span class="nav-number">3.</span> <span class="nav-text">3.博客文章阅读次数统计报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-1"><span class="nav-number">3.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案-1"><span class="nav-number">3.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+	  
+	  
+		<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+		<div class="widget-wrap">
+			
+			<div id="myCanvasContainer" class="widget tagcloud">
+				<canvas width="240" height="240" id="resCanvas" style="width=100%">
+					<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NexT/">NexT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NexT优化/">NexT优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/">Next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StringUtils/">StringUtils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li></ul>
+				</canvas>
+			</div>
+		</div>
+	  
+	  
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">晨风细雨</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">51k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">46 分钟</span>
+  
+</div>
+
+
+
+
+
+<span id="sitetime"></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2019,07,21,00,00,00); //你的建站时间
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" Run for "+/*diffYears+" Year "+*/diffDays+" Days "+diffHours+" Hours "+diffMinutes+" m "+diffSeconds+" s";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script id="ribbon" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI',
+    appKey: '8GzUldR2FT6notgAH7yF83Gt',
+    placeholder: '说点什么吧！',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'VO9SBzGVSy9WUlrBPw286SOf-MdYXbMMI',
+                'X-LC-Key': '8GzUldR2FT6notgAH7yF83Gt',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+  
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/custom.js"></script>
+</body>
+</html>
