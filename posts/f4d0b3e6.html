@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="晨风细雨的个人博客">
 <meta property="og:description" content="背景由于站点配置文件中 Permalink 默认为：posts:/:year/:month/:day/:title/这种默认配置的缺点就是一般文件名是中文，导致url链接里有中文出现，这会造成很多问题，如使用gitment，也不利于seo。另外就是年月日都会有分隔符。 本文将使用hexo-abbrlink插件解决此问题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-21T10:09:29.925Z">
+<meta property="og:updated_time" content="2019-08-21T12:05:27.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT永链优化（hexo-abbrlink）">
 <meta name="twitter:description" content="背景由于站点配置文件中 Permalink 默认为：posts:/:year/:month/:day/:title/这种默认配置的缺点就是一般文件名是中文，导致url链接里有中文出现，这会造成很多问题，如使用gitment，也不利于seo。另外就是年月日都会有分隔符。 本文将使用hexo-abbrlink插件解决此问题">
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="创建时间：2019-08-21 17:18:14 / 修改时间：18:09:29" itemprop="dateCreated datePublished" datetime="2019-08-21T17:18:14+08:00">2019-08-21</time>
+              <time title="创建时间：2019-08-21 17:18:14 / 修改时间：20:05:27" itemprop="dateCreated datePublished" datetime="2019-08-21T17:18:14+08:00">2019-08-21</time>
             </span>
           
 
@@ -501,13 +501,13 @@
       
 
       
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>由于站点配置文件中 Permalink 默认为：<code>posts:/:year/:month/:day/:title/</code>这种默认配置的缺点就是一般文件名是中文，导致url链接里有中文出现，这会造成很多问题，如使用gitment，也不利于seo。另外就是年月日都会有分隔符。</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于站点配置文件中 Permalink 默认为：<code>posts:/:year/:month/:day/:title/</code>这种默认配置的缺点就是一般文件名是中文，导致url链接里有中文出现，这会造成很多问题，如使用gitment，也不利于seo。另外就是年月日都会有分隔符。</p>
 <p>本文将使用<code>hexo-abbrlink</code>插件解决此问题</p>
 <a id="more"></a>
 
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`npm install hexo-abbrlink --save`</span><br></pre></td></tr></table></figure>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`npm install hexo-abbrlink --save`</span><br></pre></td></tr></table></figure>
 
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在<code>站点配置文件</code>中修改<code>permalink</code>为如下：</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在<code>站点配置文件</code>中修改<code>permalink</code>为如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink.html</span>   <span class="comment">#其中:abbrlink代表连接地址。</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line"><span class="attr">  alg:</span> <span class="string">crc32</span>  <span class="comment"># 算法：crc16(default) and crc32</span></span><br><span class="line"><span class="attr">  rep:</span> <span class="string">hex</span>    <span class="comment"># 进制：dec(default) and hex</span></span><br></pre></td></tr></table></figure>
 
 <p>这里将页面都添加了 <code>.html</code> 的后缀，用来伪装成静态页面(虽说Hexo的页面本身就是静态页面)，这样可以直接从路径就知道这是个静态页面，方便seo。</p>
@@ -517,7 +517,7 @@
 
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#permalink: :year/:month/:day/:title/   </span></span><br><span class="line"><span class="comment">#permalink_defaults:                  </span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink.html</span>  </span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line"><span class="attr">  alg:</span> <span class="string">crc32</span>  <span class="comment"># 算法：crc16(default) and crc32</span></span><br><span class="line"><span class="attr">  rep:</span> <span class="string">hex</span>    <span class="comment"># 进制：dec(default) and hex</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><div class="note info">
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><div class="note info">
             <p><a href="https://blog.csdn.net/lewky_liu/article/details/80517635" target="_blank" rel="noopener">Hexo - 修改永久链接的默认格式</a></p><p><a href="https://blog.csdn.net/yanzi1225627/article/details/77761488" target="_blank" rel="noopener">hexo链接持久化终极解决之道</a></p><p><a href="https://post.zz173.com/detail/hexo-abbrlink.html" target="_blank" rel="noopener">hexo-abbrlink介绍</a></p><p><a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></p>
           </div>
       
@@ -766,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装插件"><span class="nav-number">2.1.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装插件"><span class="nav-number">2.1.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">2.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
