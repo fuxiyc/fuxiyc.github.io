@@ -1804,7 +1804,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #06d101;
+  background: #79f083;
 }
 .feed-link,
 .chat {
@@ -2924,6 +2924,7 @@ code {
   padding-top: 5px !important;
 }
 #sitetime {
-  color: #77a1d3;
-/*linear-gradient(#ff6e7f, #bfe9ff);*/
+  background-image: -webkit-linear-gradient(left, #aa4b6b, #6b6b83, #3b8d99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
