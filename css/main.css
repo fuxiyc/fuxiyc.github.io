@@ -1804,7 +1804,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a8502e;
+  background: #06d101;
 }
 .feed-link,
 .chat {
@@ -2922,4 +2922,8 @@ code {
 }
 .post-body h3 {
   padding-top: 5px !important;
+}
+#sitetime {
+  color: #77a1d3;
+/*linear-gradient(#ff6e7f, #bfe9ff);*/
 }
