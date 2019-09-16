@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="晨风细雨的个人博客">
 <meta property="og:description" content="SQL语句学习[]包裹的表示 可选项参数  SHOW WARNINGS DESC 表名可以查看表结构">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-16T13:43:48.306Z">
+<meta property="og:updated_time" content="2019-09-16T15:40:01.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL语句学习">
 <meta name="twitter:description" content="SQL语句学习[]包裹的表示 可选项参数  SHOW WARNINGS DESC 表名可以查看表结构">
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="创建时间：2019-09-16 16:24:05 / 修改时间：21:43:48" itemprop="dateCreated datePublished" datetime="2019-09-16T16:24:05+08:00">2019-09-16</time>
+              <time title="创建时间：2019-09-16 16:24:05 / 修改时间：23:40:01" itemprop="dateCreated datePublished" datetime="2019-09-16T16:24:05+08:00">2019-09-16</time>
             </span>
           
 
@@ -470,7 +470,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">1.8k</span>
+              <span title="本文字数">2.6k</span>
             </span>
           
 
@@ -578,7 +578,23 @@
 <p>其中MySQL会自动使用字段作为索引名</p>
 <p><strong>创建复合唯一约束</strong></p>
 <p>在表级唯一性约束创建时<code>UNIQUE()</code>的字段列表中，可以添加多个字段，组成复合唯一键，其特点是只有多个字段的值相同时才视为重复记录。</p>
-<h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3>
+<h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><p>主键是可以唯一标识表中的记录，主键约束通过<code>PRIMARY KEY</code>定义，它相当于<code>唯一约束</code>和<code>非空约束</code>的组合，要求被约束字段不允许重复，也不允许出现NULL值，每个表最多只允许含有一个主键</p>
+<p>主键约束的创建也分列级和表级</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列级约束</span></span><br><span class="line">字段名 数据类型 PRIMARY KEY</span><br><span class="line"><span class="comment">#表级约束</span></span><br><span class="line">PRIMARY KEY (字段名1,字段名2,......)</span><br></pre></td></tr></table></figure>
+
+<p><strong>为一个现有的表添加或删除主键约束</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1删除主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> my_primary <span class="keyword">DROP</span> PRIMARY <span class="keyword">KEY</span>;</span><br><span class="line"><span class="comment">#  my_primary 是表名</span></span><br><span class="line"><span class="comment"># 2 删除id字段的非空约束（id字段之前是主键）(此步可选)</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> my_primary <span class="keyword">MODIFY</span> <span class="keyword">id</span> <span class="built_in">INT</span> <span class="keyword">UNSIGNED</span>;</span><br><span class="line"><span class="comment"># 3 添加主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> my_primary <span class="keyword">ADD</span> PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在删除id字段的主键约束后，该字段的<code>非空约束</code>并没有被同时删除,若要删除id字段的非空约束，执行步骤2即可。</p>
+<h3 id="自动增长"><a href="#自动增长" class="headerlink" title="自动增长"></a>自动增长</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型 AUTO_INCREMENT</span><br></pre></td></tr></table></figure>
+
+<div class="note warning">
+            <p>一个表中只能有一个字段增长字段，该 字段的数据类型是整数类型，且必须定义为键，如<code>UNIQUE KEY</code>，<code>PRIMARY KEY</code>。</p><p>若为自动增长字段插入<code>NULL、0、DEFAULT、或在插入的时候省略该字段</code>则该字段就会使用自动增长值；但若插入的是一个具体值，，则不会使用自动增长值。</p><p>自动增长值从1开始自增，每次加1,。若插入的值大于自动增长的值，则下次插入的自动增长的值会自动使用最大值加1，；若插入的值小于置顶增长值，则不会对自动增长的值产生影响。</p><p>使用DELETE删除记录时，自动增长值不会减小或填补空缺。</p>
+          </div>
+
+
+
+
       
     </div>
 
@@ -833,7 +849,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL语句学习"><span class="nav-number">1.</span> <span class="nav-text">SQL语句学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库操作"><span class="nav-number">1.1.</span> <span class="nav-text">数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据库"><span class="nav-number">1.1.2.</span> <span class="nav-text">查看数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择数据库"><span class="nav-number">1.1.3.</span> <span class="nav-text">选择数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.1.4.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表操作"><span class="nav-number">1.2.</span> <span class="nav-text">数据表操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据表"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建数据表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作"><span class="nav-number">1.3.</span> <span class="nav-text">数据操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的约束"><span class="nav-number">1.4.</span> <span class="nav-text">表的约束</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认约束"><span class="nav-number">1.4.1.</span> <span class="nav-text">默认约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非空约束"><span class="nav-number">1.4.2.</span> <span class="nav-text">非空约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一约束"><span class="nav-number">1.4.3.</span> <span class="nav-text">唯一约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键约束"><span class="nav-number">1.4.4.</span> <span class="nav-text">主键约束</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL语句学习"><span class="nav-number">1.</span> <span class="nav-text">SQL语句学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库操作"><span class="nav-number">1.1.</span> <span class="nav-text">数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据库"><span class="nav-number">1.1.2.</span> <span class="nav-text">查看数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择数据库"><span class="nav-number">1.1.3.</span> <span class="nav-text">选择数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.1.4.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表操作"><span class="nav-number">1.2.</span> <span class="nav-text">数据表操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据表"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建数据表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作"><span class="nav-number">1.3.</span> <span class="nav-text">数据操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的约束"><span class="nav-number">1.4.</span> <span class="nav-text">表的约束</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认约束"><span class="nav-number">1.4.1.</span> <span class="nav-text">默认约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非空约束"><span class="nav-number">1.4.2.</span> <span class="nav-text">非空约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一约束"><span class="nav-number">1.4.3.</span> <span class="nav-text">唯一约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键约束"><span class="nav-number">1.4.4.</span> <span class="nav-text">主键约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动增长"><span class="nav-number">1.4.5.</span> <span class="nav-text">自动增长</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -879,7 +895,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">54k</span>
+    <span title="站点总字数">55k</span>
   
 
   
@@ -888,7 +904,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">49 分钟</span>
+    <span title="站点阅读时长">50 分钟</span>
   
 </div>
 
