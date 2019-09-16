@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SQL语句学习]]></title>
+    <url>%2Fposts%2Fa193c35f.html</url>
+    <content type="text"><![CDATA[SQL语句学习[]包裹的表示 可选项参数 SHOW WARNINGS DESC 表名可以查看表结构 数据库操作创建数据库1CREATE DATABASE [IF NOT EXISTS] 数据库名称 [库选项]; 数据库名称可以是字母、数字和下划线组成的任意字符串 库选项用于设置数据库相关特性，如存储引擎（ENGINE），字符集（CHARSET），校对集（COLLATE）。 IF NOT EXISTS ：在创建数据库是在“数据库名称”前添加IF NOT EXISTS表示指定的数据库不存在时执行创建操作，否则忽略此操作。 查看数据库选择数据库 1USE 数据库名称; 登录MySQL服务器时选择数据库 1mysql -u 用户名 -p密码 数据库名 删除数据库1DROP DATABASE 数据库名称; 若待删除的数据库名称不存在，MySQL服务器会报错，因此可以在删除数据库时，使用IF EXISTS 表示若MySQL 服务器 中若存在 待删除的数据库名称,则删除该数据库，否则不会执行删除数据库的操作 数据表操作创建数据表1234567CREATE [TEMPORARY] TABLE [IF NOT EXISTS] 表名 ( 字段名1 字段类型 [字段属性], 字段名2 字段类型 [字段属性], …… 字段名n 字段类型 [字段属性] )[表选项] ; 表选项： 存储引擎（ENGINE） 字符集（CHARSET） 校对集（COLLATE） 1ENGINE=引擎名 CHARSET=字符集名 COLLATE=校对集名 在操作数据表之前，应该使用USE 数据库名指定操作是在哪个数据库中进行，否则会抛出No database selected错误。 数据操作 表的约束默认约束默认约束指定某列的默认值，如果没有给某个字段赋值，那么数据库系统会自动为这个字段插入默认值，其基本语法结构如下 1字段名 数据类型 DEFAULT 默认值; 如果设置默认值18后，插入NULL值，则保存结果为NULL，不使用默认值。在为有默认值的字段指定数据时，可以通过DDEFAULT关键字直接指定其使用默认值。 为现有的表添加或删除默认约束 12341.删除默认约束ALTER TABLE my_default MODIEY age INT UNSIGNED;2.添加默认约束ALTER TABLE my_default MODIFY age INT UNSIGNED DEFAULT 18; 使用ALTER TABLE修改列属性即可添加或删除默认约束 使用modidy修改字段的属性 非空约束使字段的值不能为NULL ,其语法结构如下 1字段名 数据类型 NOT NULL; 若 添加了非空约束的 n字段的Default为NULL，表示为给该字段设置默认值，而不能将其理解为默认值为NULL。非空约束与值为NULL的默认约束（DEFAULT NULL）不能同时存在，否则数据表在创建时会失败，但默认约束的值不是NULL即可同时存在 为现有的表添加或删除非空约束 其方法与默认约束类似，使用ALTER TABLE修改列属性即可。但若目标列中已经保存了NULL值，添加非空约束会失败，只要将NULL的值修改为其他值即可。 唯一约束唯一约束用于保证数据表中字段的唯一性， 12345#列级约束字段名 数据类型 UNIQUE;#表级约束UNIQUE(字段名1,字段名2,.....); 列级约束和表级约束是MySQL中的两种定义约束的方式，列级约束定义在一个列上，只对该列起约束作用。 表级约束是独立于列的定义，可以应用在一个表的多个列上。 当表级约束仅建立在一个字段上时，其作用与列级约束相同。 添加和删除唯一性约束 若为一个现有的表添加或删除唯一约束，无法通过修改字段属性的方式操作，而是按照索引的方式来操作。 1UNIQUE KEY 索引名 (字段列表) 其中MySQL会自动使用字段作为索引名 创建复合唯一约束 在表级唯一性约束创建时UNIQUE()的字段列表中，可以添加多个字段，组成复合唯一键，其特点是只有多个字段的值相同时才视为重复记录。 主键约束]]></content>
+      <categories>
+        <category>sql语句</category>
+      </categories>
+      <tags>
+        <tag>sql</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mysql的使用]]></title>
+    <url>%2Fposts%2Ff2d5c85c.html</url>
+    <content type="text"><![CDATA[….. 数据库操作创建数据库1CREATE DATABASE 数据库名称 [库选项]; 查看数据库 查看MySQL服务器下所有数据库 1SHOW DATABASES; 查看指定数据库的创建信息 1SHOW CREATE DATABASE 数据库名称; 选择数据库1use 数据库名称 删除数据库1DROP DATABASE 数据库名称; 注释单行注释MySQL中单行注释以”#”开始标识，也支持标准SQL中”–”单行注释。但是为了防止”–”与SQL语句中负号和减法运算的混淆了，在第二个短横线后必须添加至少一个控制字符（如空格、制表符、换行符等）将其标识为当行注释符号。多行注释]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[NexT永链优化（hexo-abbrlink）]]></title>
     <url>%2Fposts%2Ff4d0b3e6.html</url>
     <content type="text"><![CDATA[背景由于站点配置文件中 Permalink 默认为：posts:/:year/:month/:day/:title/这种默认配置的缺点就是一般文件名是中文，导致url链接里有中文出现，这会造成很多问题，如使用gitment，也不利于seo。另外就是年月日都会有分隔符。 本文将使用hexo-abbrlink插件解决此问题 解决方案安装插件1`npm install hexo-abbrlink --save` 使用在站点配置文件中修改permalink为如下： 1234permalink: posts/:abbrlink.html #其中:abbrlink代表连接地址。abbrlink: alg: crc32 # 算法：crc16(default) and crc32 rep: hex # 进制：dec(default) and hex 这里将页面都添加了 .html 的后缀，用来伪装成静态页面(虽说Hexo的页面本身就是静态页面)，这样可以直接从路径就知道这是个静态页面，方便seo。 一定要将原来的permalink注释掉:可参考下面代码 123456#permalink: :year/:month/:day/:title/ #permalink_defaults: permalink: posts/:abbrlink.html abbrlink: alg: crc32 # 算法：crc16(default) and crc32 rep: hex # 进制：dec(default) and hex 参考 Hexo - 修改永久链接的默认格式hexo链接持久化终极解决之道hexo-abbrlink介绍hexo-abbrlink]]></content>
@@ -53,10 +70,5 @@
         <tag>java</tag>
         <tag>StringUtils</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[我的第一篇博客文章]]></title>
-    <url>%2Fposts%2Fb24dd347.html</url>
-    <content type="text"><![CDATA[第一章将hexo 用 github+netlify部署 1234public void falDde()&#123; int i=9; i++;&#125; 第二章 参考文献]]></content>
   </entry>
 </search>
